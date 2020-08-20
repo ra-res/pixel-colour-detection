@@ -53,7 +53,7 @@ def getColorName(R,G,B):
         d = abs(R- int(csv.loc[i,"R"])) + abs(G- int(csv.loc[i,"G"]))+ abs(B- int(csv.loc[i,"B"]))
         if(d<=minimum):
             minimum = d
-            cname = csv.loc[i,"color_name"]     
+            cname = f'{csv.loc[i,"color_name"]} {csv.loc[i,"hex"]}'     
     return cname
 
 while(1):
